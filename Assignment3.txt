@@ -1,0 +1,21 @@
+package corejava;
+
+import java.util.Scanner;
+//simple and compound interest
+public class Assignment3 {
+   public static void main(String[] args) {
+
+      double principal, rate, time, simpleintetrest, compoundinterest;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the amount:");
+      principal = sc.nextDouble();
+      System.out.println("Enter the No.of years:");
+      time= sc.nextDouble();
+      System.out.println("Enter the Rate of  interest");
+      rate = sc.nextDouble();
+      simpleintetrest= (principal * time * rate) / 100;
+      compoundinterest =  principal * Math.pow(1.0 + rate / 100.0,time) - principal;
+      System.out.println("Simple Interest=" + simpleintetrest);
+      System.out.println("Compound Interest=" + compoundinterest);
+   }
+}
